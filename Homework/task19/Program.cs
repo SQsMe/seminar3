@@ -1,17 +1,26 @@
-﻿/* 
-Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом 
-(число, одинаково читающееся в обоих направлениях)
-14212 -> нет
-12821 -> да
-23432 -> да
+﻿/* Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+A (3,6,8); B (2,1,-7), -> 15.84
+A (7,-5, 0); B (1,-1,9) -> 11.53
 */
 
-Console.Write("Введи число: ");
-int anyNumber = Convert.ToInt32(Console.ReadLine()); //задаем переменную anyNumber
-string anyNumberText = Convert.ToString(anyNumber); // переводим в ряд чисел
+System.Console.Write("Координатy X первой точки:");
+int x1 = Convert.ToInt32(Console.ReadLine());
 
-if (anyNumberText[0] == anyNumberText[4] && anyNumberText[1] == anyNumberText[3]) //тут не ставятся {} внутри совместно с []}
-    Console.WriteLine("Число является палиндромом"); 
-else{
-    Console.WriteLine("Число не является палиндромом");
-}
+System.Console.Write("Координатy Y первой точки:");
+int y1 = Convert.ToInt32(Console.ReadLine());
+
+System.Console.Write("Координатy Z первой точки:");
+int z1 = Convert.ToInt32(Console.ReadLine());
+
+System.Console.Write("Координатy X второй точки:");
+int x2 = Convert.ToInt32(Console.ReadLine());
+
+System.Console.Write("Координатy Y второй точки:");
+int y2 = Convert.ToInt32(Console.ReadLine());
+
+System.Console.Write("Координатy Z второй точки:");
+int z2 = Convert.ToInt32(Console.ReadLine());
+
+         
+double result = Math.Sqrt(Math.Pow ((x2-x1),2) + Math.Pow((y2-y1),2) + Math.Pow((z2-z1),2));
+System.Console.WriteLine(result);
